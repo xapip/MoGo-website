@@ -157,7 +157,7 @@ li:last-child {
   background-color: #fff;
   position: absolute;
   left: 0;
-  transition: background-color 0.2s linear, transform .2s linear;
+  transition: background-color 0.2s linear, transform 0.3s linear;
 }
 
 .nav-toggle__item::before {
@@ -1370,9 +1370,6 @@ li:last-child {
   .nav-link {
     display: block;
     width: 100%;
-  }
-  .nav-link::after {
-    top: 130%;
   }
 
   .slider-text {
