@@ -157,7 +157,7 @@ li:last-child {
   background-color: #fff;
   position: absolute;
   left: 0;
-  transition: background-color 0.2s linear, ;
+  transition: background-color 0.2s linear, transform .2s linear;
 }
 
 .nav-toggle__item::before {
