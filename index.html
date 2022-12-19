@@ -18,6 +18,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
 	<!-- icon -->
 	<script src="https://kit.fontawesome.com/f88a178db7.js" crossorigin="anonymous"></script>
@@ -31,12 +32,12 @@
 	<header class="header" id="header">
 			<div class="container">
 				<div class="header-container ">
-					<div class="header-logo">
+					<div class="header-logo" data-scroll="#intro">
 						<p>
 						MoGo
 						</p>
 					</div>
-					<nav class="nav">
+					<nav class="nav" id="nav">
 						<ul>
 							<li>
 								<a class="nav-link" href="#" data-scroll="#about">
@@ -76,7 +77,7 @@
 							</li>
 						</ul>
 					</nav>
-					<button class="nav-toggle" type="button">
+					<button class="nav-toggle" type="button" id="nav_toggle">
 						<span class="nav-toggle__item">Menu</span>
 					</button>
 				</div>
@@ -275,30 +276,30 @@
 	
 					<div class="wedo-item">
 						<div class="accordion">
-							<div class="accordion-item active">
+							<div class="accordion-item" data-collapse="#wedo_1">
 								<div class="accordion-title">
 									<img src="./images/wedo/wedo-img.png" alt="">
 									<h4>Photography</h4>
 								</div>
-								<div class="accordion-content">
+								<div class="accordion-content" id="wedo_1">
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut</p>
 								</div>
 							</div><!-- .accordion-item  -->
-							<div class="accordion-item ">
+							<div class="accordion-item" data-collapse="#wedo_2">
 								<div class="accordion-title">
 									<img src="./images/wedo/wedo-equalaiser.png" alt="">
 									<h4>creativity</h4>
 								</div>
-								<div class="accordion-content">
+								<div class="accordion-content" id="wedo_2">
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut</p>
 								</div>
 							</div><!-- .accordion-item  -->
-							<div class="accordion-item ">
+							<div class="accordion-item " data-collapse="#wedo_3">
 								<div class="accordion-title">
 									<img src="./images/wedo/wedo-equalaiser.png" alt="">
 									<h4>creativity</h4>
 								</div>
-								<div class="accordion-content">
+								<div class="accordion-content" id="wedo_3">
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut</p>
 								</div>
 							</div><!-- .accordion-item  -->
@@ -311,19 +312,32 @@
 		<!-- reviews -->
 		<div class="section section--bg_gray">
 			<div class="container">
-				<div class="reviews">
-					<a class="reviews-btn reviews-btn-prev" href="#">Prev</a>
-					<a class="reviews-btn reviews-btn-next" href="#">Next</a>
-					
-					<div class="reviews-item-active reviews-item">
-						<img class="reviews-photo" src="./images/reviews/reviews.png" alt="">
-						<div class="reviews-text">
-							<p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
-						</div><!-- .comment-text -->
-						<div class="reviews-author">
-							Jon Doe
+				<div class="reviews">					
+					<div data-slider>
+						<div>
+							<div class="reviews-item-active reviews-item">
+								<img class="reviews-photo" src="./images/reviews/reviews.png" alt="">
+								<div class="reviews-text">
+									<p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
+								</div><!-- .comment-text -->
+								<div class="reviews-author">
+									Jon Doe
+								</div>
+							</div><!-- .reviews-item -->
 						</div>
-					</div><!-- .reviews-item -->
+
+						<div>
+							<div class="reviews-item-active reviews-item">
+								<img class="reviews-photo" src="./images/reviews/reviews.png" alt="">
+								<div class="reviews-text">
+									<p>“Ab qui et quasi exercitationem est labore saepe repudiandae, numquam expedita eaque illo omnis iure incidunt. Nostrum autem at blanditiis cumque minima qui debitis enim veritatis doloribus iste labore eligendi, officiis id officia repellendus odit recusandae cum odio, totam delectus ipsum nam distinctio.”</p>
+								</div><!-- .comment-text -->
+								<div class="reviews-author">
+									Tim Burton
+								</div>
+							</div><!-- .reviews-item -->
+						</div>
+					</div>
 				</div><!-- .reviews -->
 			</div><!-- .container -->
 		</div><!-- .section .section--bg_gray -->
@@ -532,19 +546,45 @@
 		<!-- reviews 2 -->
 		<div class="section">
 			<div class="container">
-				<div class="reviews">
-					<a class="reviews-btn reviews-btn-prev" href="#">Prev</a>
-					<a class="reviews-btn reviews-btn-next" href="#">Next</a>
-					
-					<div class="reviews-item-active reviews-item">
-						<img class="reviews-photo" src="./images/avatar.png" alt="">
-						<div class="reviews-text">
-							<p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
-						</div><!-- .comment-text -->
-						<div class="reviews-author">
-							Joshua Earle
+				<div class="reviews">					
+					<div data-slider>
+						<div>
+							<div class="reviews-item-active reviews-item">
+								<img class="reviews-photo" src="./images/avatar.png" alt="">
+								<div class="reviews-text">
+									<p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
+								</div><!-- .comment-text -->
+								<div class="reviews-author">
+									Joshua Earle
+								</div>
+							</div><!-- .reviews-item -->
 						</div>
-					</div><!-- .reviews-item -->
+
+						<div>
+							<div class="reviews-item-active reviews-item">
+								<img class="reviews-photo" src="./images/avatar.png" alt="">
+								<div class="reviews-text">
+									<p>“Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni quaerat temporibus fuga repudiandae incidunt possimus? Assumenda ipsam quisquam voluptates maxime modi dicta distinctio perspiciatis aut ad nihil architecto, amet dolore exercitationem. Laborum temporibus eaque excepturi consequatur itaque amet est! Et pariatur dolorem aliquam dicta, unde at itaque cupiditate architecto! Dignissimos!”</p>
+								</div><!-- .comment-text -->
+								<div class="reviews-author">
+									Tom Cruise
+								</div>
+							</div><!-- .reviews-item -->
+						</div>
+
+						<div>
+							<div class="reviews-item-active reviews-item">
+								<img class="reviews-photo" src="./images/avatar.png" alt="">
+								<div class="reviews-text">
+									<p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
+								</div><!-- .comment-text -->
+								<div class="reviews-author">
+									Quentin Tarantino
+								</div>
+							</div><!-- .reviews-item -->
+						</div>
+
+					</div>
 				</div><!-- .reviews -->
 			</div><!-- .container -->
 		</div><!-- .section -->
@@ -865,6 +905,7 @@
 	</footer>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 	<script src="./script.js"></script>
 </body>
 </html>
